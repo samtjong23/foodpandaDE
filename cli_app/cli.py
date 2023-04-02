@@ -16,8 +16,41 @@ MAIN_MENU = re.sub("\t+", "",
                    )
 
 ACTIONS = {
-    "4": "To be updated",
-    "5": "To be updated"
+    "4": re.sub("\t+", "",
+                """
+								Refactoring is the process of restructuring existing code without changing its external behavior. The goal of refactoring can include:
+								- Improving readability and maintainability
+								- Reducing complexity
+								- Improving performance
+								- Ensuring compatibility with new technologies or platforms
+							
+								Testing is the process of checking if a software application works as it should. The goal of writing test cases can include:
+								- Making sure software behaves as expected
+								- Finding and fixing issues early on
+								- Ensuring that new changes don't break existing functionality
+							
+								There are different types of tests, including unit tests and integration tests.
+								- Unit tests check individual parts of the code in isolation, to ensure they work as intended.
+								- Integration tests check how different parts of the code work together, to ensure the whole system functions as it should.
+								"""
+                ),
+    "5": re.sub("\t+", "",
+                """
+								The FastAPI repository has a clear structure, which makes it very easy for both users and contributors to find what they are looking for.
+								
+								Here is a brief overview of the structure:
+								- docs/ & docs_src: These directories contains the documentation for the project
+								- fastapi/: This directory contains the source code for the FastAPI framework
+								- script/ : This directory contains various scripts that can be useful for contributors when working on the repository
+								- tests/: This directory contains the tests for the FastAPI framework
+
+								Furthermore, the repository also features clear commit messages and a detailed README file that explains what the repository does and how to use it.
+								
+								However, there are still areas for improvements:
+								- The codebase could benefit from more inline comments to explain what each block of code does. This would help other developers understand the codebase and make it easier to maintain in the future.
+								- Some commits can be repetitive. For example, back-to-back commits that say "Update release notes" could be merged into a single commit to keep the commit history clean and concise.
+								"""
+                )
 }
 
 
