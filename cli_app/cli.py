@@ -1,3 +1,5 @@
+"""This module contains the code for the CLI App interface"""
+
 import sys
 import re
 

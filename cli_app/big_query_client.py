@@ -1,3 +1,7 @@
+"""
+This module gives the CLI App the ability to create BigQuery tables using Google API
+"""
+
 import sys
 from google.cloud import bigquery
 
@@ -53,6 +57,7 @@ class BigQueryClient:
         self.dataset = dataset
         self.dataset_ref = self.client.dataset(self.dataset)
 
+        # Check if the dataset name is valid
         try:
             self.client.get_dataset(self.dataset_ref)
         except:
@@ -80,6 +85,7 @@ class BigQueryClient:
             job_config = bigquery.QueryJobConfig(
                 destination=table_ref, write_disposition="WRITE_TRUNCATE")
 
+            # Execute the SQL query and store the results in the destination table
             query_job = self.client.query(query, job_config=job_config)
             query_job.result()
 
