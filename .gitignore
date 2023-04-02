@@ -1,0 +1,5 @@
+.env
+*.json
+*.json:Zone.Identifier
+venv/
+cli_app/__pycache__/
